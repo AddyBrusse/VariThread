@@ -65,7 +65,15 @@ g.xOutput = outputVar("X", g.xFormat);
 g.yOutput = outputVar("Y", fmt(3));
 g.zOutput = outputVar("Z", g.zFormat);
 g.sOutput = outputVar("S", g.rpmFormat);
-g.gMotionModal = { format: function (v) { return "G" + v; }, reset: function () {} };
+// Modaal, net als createOutputVariable in de post: een tweede G0 op rij levert
+// een lege string op. Zonder dit verbergt de stub ontbrekende G-woorden.
+g.gMotionModal = (function () {
+    var current = null;
+    return {
+        format: function (v) { if (current === v) { return ""; } current = v; return "G" + v; },
+        reset: function () { current = null; }
+    };
+})();
 g.currentSection = {};
 g.spindleSpeed = params["operation:tool_spindleSpeed"];
 g.errors = [];
@@ -149,7 +157,10 @@ ok(/^S4=190$/m.test(text) && /^S4=200$/m.test(text) && /^S4=210$/m.test(text),
     "toerentallen 190 / 200 / 210 bij 200 tpm en 5%");
 ok(g33.every(function (l) { return /^G33 X-?[\d.]+ Z-?[\d.]+ K6$/.test(l); }),
     "elke G33 heeft X, Z en K6");
-ok(text.indexOf("G0 X115") >= 0, "terugtrekken naar X115");
+var retracts = out.filter(function (l) { return /^(G0 )?X115$/.test(l); });
+ok(retracts.length === 6, "zes terugtrekkingen naar X115 (" + retracts.length + ")");
+ok(retracts.every(function (l) { return l === "G0 X115"; }),
+    "elke terugtrekking heeft een G0: " + retracts.join(" | "));
 
 // De laatste snijbeweging moet op einddiepte en op het eind van de draad staan.
 var last = g33[g33.length - 1];

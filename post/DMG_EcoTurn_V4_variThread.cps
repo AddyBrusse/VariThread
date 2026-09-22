@@ -3100,6 +3100,14 @@ var variThread = {
         return "X" + xFormat.format(diameter / 2);
     },
 
+    // De G33-regels gaan buiten gMotionModal om, dus die denkt dat G0 nog
+    // actief is en laat het woord weg. Elke terugtrekking moet een eigen G0
+    // hebben, anders loopt de beitel er in G33 naartoe.
+    retract: function (diameter) {
+        gMotionModal.reset();
+        writeBlock(gMotionModal.format(0), this.dia(diameter));
+    },
+
     // Leidt de draadgeometrie af uit de opgevangen bewegingen plus de
     // operatieparameters. Geeft null terug als er iets ontbreekt; de aanroeper
     // meldt dat dan als fout in plaats van te gokken.
@@ -3210,7 +3218,7 @@ var variThread = {
         var kWord = "K" + spatialFormat.format(geo.pitch);
         var lastRpm = -1;
         if (!atClearance) {
-            writeBlock(gMotionModal.format(0), this.dia(geo.retractDiameter));
+            this.retract(geo.retractDiameter);
         }
 
         for (var p = 0; p < passes.length; ++p) {
@@ -3225,7 +3233,7 @@ var variThread = {
             for (var n = 0; n < pass.nodes.length; ++n) {
                 writeBlock("G33", this.dia(pass.nodes[n].x), "Z" + zFormat.format(pass.nodes[n].z), kWord);
             }
-            writeBlock(gMotionModal.format(0), this.dia(geo.retractDiameter));
+            this.retract(geo.retractDiameter);
         }
 
         // De modale stand is met de hand geschreven; forceer hem terug zodat de
