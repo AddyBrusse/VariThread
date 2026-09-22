@@ -1,0 +1,9 @@
+{
+  "name": "varithread",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Fusion post-processor voor draadsnijden met oscillerende, varierende X-diepte",
+  "scripts": {
+    "test": "node test/varithread.test.js && node test/emitter.test.js"
+  }
+}

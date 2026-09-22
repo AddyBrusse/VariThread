@@ -1,0 +1,791 @@
+!DEBUG: 1 DMG_EcoTurn_V3.cps:728
+; onMachine(): machine configuration updated
+!DEBUG: onOpen()
+!DEBUG: 1 DMG_EcoTurn_V3.cps:728
+!DEBUG: 2 DMG_EcoTurn_V3.cps:839
+!DEBUG: 3 DMG_EcoTurn_V3.cps:911
+; onMachine(): machine configuration updated
+!DEBUG: 1 DMG_EcoTurn_V3.cps:927
+; %_N_1001_MPF
+!DEBUG: onParameter('product-id', "fusion360")
+!DEBUG: onParameter('generated-by', "Fusion CAM 2705.1.15")
+!DEBUG: onParameter('generated-at', "Tuesday, September 22, 2026 9:54:21 AM")
+!DEBUG: onParameter('hostname', "PC-CTX450")
+!DEBUG: onParameter('username', "WerkplaatsBoerMetaal")
+!DEBUG: onParameter('user-id', "88Q2NKGULS8R92K3")
+!DEBUG: onParameter('user-email', "info@boers-metaalbewerking.nl")
+!DEBUG: onParameter('display-name', "DMG Doosan Boers")
+!DEBUG: onParameter('document-path', "1703-0000-0056-1 - Bolt 74x155-M48x214")
+!DEBUG: onParameter('document-id', "6354a2f2-5d21-48d7-8d48-2047b4d776ad")
+!DEBUG: onParameter('model-version', "61878e57-59d5-4a4d-aece-5167645388a4")
+!DEBUG: onParameter('datafile-id', "urn:adsk.wipprod:dm.lineage:KVijp-I3QZSFvF1bvTMHcg")
+!DEBUG: onParameter('datafile-version-id', "urn:adsk.wipprod:fs.file:vf.KVijp-I3QZSFvF1bvTMHcg?version=1")
+!DEBUG: onParameter('datafile-webURL', "https://boersengineering.autodesk360.com/g/projects/20200515298316626/data/dXJuOmFkc2sud2lwcHJvZDpmcy5mb2xkZXI6Y28uV3kycndNbEpUSE9Ta3VEN2xlT2tLZw/dXJuOmFkc2sud2lwcHJvZDpkbS5saW5lYWdlOktWaWpwLUkzUVpTRnZGMWJ2VE1IY2c?show=viewer")
+!DEBUG: onParameter('leads-supported', 1)
+!DEBUG: onParameter('job-description', "Setup1")
+!DEBUG: onParameter('job-notes', "Met de hand gevlakt en het center er bij gezet\nwisselpos Z=450")
+!DEBUG: onParameter('stock-material', "Steel, Low-Carbon")
+!DEBUG: onParameter('stock-material-category', "Metal")
+!DEBUG: onParameter('machine-id', "1")
+!DEBUG: onParameter('machine-v2', "{\n   \"controller\" : {\n      \"default\" : {\n         \"head_info_part_id\" : \"turret_0\",\n         \"max_block_processing_speed\" : 0,\n         \"max_normal_speed\" : 40000,\n         \"non_tcp_rapid_interpolation_mode\" : \"Synchronized\",\n         \"parts\" : {\n            \"linear_0\" : {\n               \"coordinate\" : 0,\n               \"max_normal_speed\" : 10000,\n               \"max_rapid_speed\" : 50000,\n               \"preference\" : \"negative\",\n               \"reset\" : \"never\",\n               \"reversed\" : false,\n               \"tcp\" : false,\n               \"zero_position_offset\" : 0\n            },\n            \"linear_1\" : {\n               \"coordinate\" : 1,\n               \"max_normal_speed\" : 10000,\n               \"max_rapid_speed\" : 50000,\n               \"preference\" : \"negative\",\n               \"reset\" : \"never\",\n               \"reversed\" : false,\n               \"tcp\" : false,\n               \"zero_position_offset\" : 0\n            },\n            \"linear_2\" : {\n               \"coordinate\" : 2,\n               \"max_normal_speed\" : 10000,\n               \"max_rapid_speed\" : 50000,\n               \"preference\" : \"negative\",\n               \"reset\" : \"never\",\n               \"reversed\" : false,\n               \"tcp\" : false,\n               \"zero_position_offset\" : 0\n            },\n            \"rotary_0\" : {\n               \"coordinate\" : 2,\n               \"max_normal_speed\" : 1000,\n               \"max_rapid_speed\" : 6000,\n               \"preference\" : \"no preference\",\n               \"reset\" : \"never\",\n               \"reversed\" : false,\n               \"tcp\" : false,\n               \"zero_position_offset\" : 0\n            }\n         },\n         \"table_part_id\" : \"table\",\n         \"tcp_rapid_interpolation_mode\" : \"ToolTip\"\n      }\n   },\n   \"general\" : {\n      \"capabilities\" : [ \"milling\", \"turning\" ],\n      \"description\" : \"Boers Custom machine\",\n      \"minimumRevision\" : 45805,\n      \"model\" : \"Ecoline 450\",\n      \"vendor\" : \"DMG\"\n   },\n   \"interactions\" : {\n      \"default\" : {\n         \"pairs\" : [\n            {\n               \"setting\" : [ \"check_collisions\" ],\n               \"solids\" : [\n                  {\n                     \"id\" : \"linear_2\",\n                     \"type\" : \"machine_part\"\n                  },\n                  {\n                     \"id\" : \"rotary_0\",\n                     \"type\" : \"machine_part\"\n                  }\n               ]\n            },\n            {\n               \"setting\" : [ \"check_collisions\" ],\n               \"solids\" : [\n                  {\n                     \"id\" : \"linear_2\",\n                     \"type\" : \"machine_part\"\n                  },\n                  {\n                     \"id\" : \"table\",\n                     \"type\" : \"machine_part\"\n                  }\n               ]\n            },\n            {\n               \"setting\" : null,\n               \"solids\" : [\n                  {\n                     \"id\" : \"linear_2\",\n                     \"type\" : \"machine_part\"\n                  },\n                  {\n                     \"id\" : \"table\",\n                     \"type\" : \"stock\"\n                  }\n               ]\n            },\n            {\n               \"setting\" : null,\n               \"solids\" : [\n                  {\n                     \"id\" : \"linear_2\",\n                     \"type\" : \"machine_part\"\n                  },\n                  {\n                     \"id\" : \"table\",\n                     \"type\" : \"fixture\"\n                  }\n               ]\n            },\n            {\n               \"setting\" : [ \"check_collisions\" ],\n               \"solids\" : [\n                  {\n                     \"id\" : \"linear_0\",\n                     \"type\" : \"machine_part\"\n                  },\n                  {\n                     \"id\" : \"rotary_0\",\n                     \"type\" : \"machine_part\"\n                  }\n               ]\n            },\n            {\n               \"setting\" : [ \"check_collisions\" ],\n               \"solids\" : [\n                  {\n                     \"id\" : \"linear_0\",\n                     \"type\" : \"machine_part\"\n                  },\n                  {\n                     \"id\" : \"table\",\n                     \"type\" : \"machine_part\"\n                  }\n               ]\n            },\n            {\n               \"setting\" : [ \"check_collisions\" ],\n               \"solids\" : [\n                  {\n                     \"id\" : \"linear_0\",\n                     \"type\" : \"machine_part\"\n                  },\n                  {\n                     \"id\" : \"table\",\n                     \"type\" : \"stock\"\n                  }\n               ]\n            },\n            {\n               \"setting\" : [ \"check_collisions\" ],\n               \"solids\" : [\n                  {\n                     \"id\" : \"linear_0\",\n                     \"type\" : \"machine_part\"\n                  },\n                  {\n                     \"id\" : \"table\",\n                     \"type\" : \"fixture\"\n                  }\n               ]\n            },\n            {\n               \"setting\" : [ \"check_collisions\" ],\n               \"solids\" : [\n                  {\n                     \"id\" : \"linear_1\",\n                     \"type\" : \"machine_part\"\n                  },\n                  {\n                     \"id\" : \"rotary_0\",\n                     \"type\" : \"machine_part\"\n                  }\n               ]\n            },\n            {\n               \"setting\" : [ \"check_collisions\" ],\n               \"solids\" : [\n                  {\n                     \"id\" : \"linear_1\",\n                     \"type\" : \"machine_part\"\n                  },\n                  {\n                     \"id\" : \"table\",\n                     \"type\" : \"machine_part\"\n                  }\n               ]\n            },\n            {\n               \"setting\" : [ \"check_collisions\" ],\n               \"solids\" : [\n                  {\n                     \"id\" : \"linear_1\",\n                     \"type\" : \"machine_part\"\n                  },\n                  {\n                     \"id\" : \"table\",\n                     \"type\" : \"stock\"\n                  }\n               ]\n            },\n            {\n               \"setting\" : [ \"check_collisions\" ],\n               \"solids\" : [\n                  {\n                     \"id\" : \"linear_1\",\n                     \"type\" : \"machine_part\"\n                  },\n                  {\n                     \"id\" : \"table\",\n                     \"type\" : \"fixture\"\n                  }\n               ]\n            },\n            {\n               \"setting\" : [ \"check_collisions\" ],\n               \"solids\" : [\n                  {\n                     \"id\" : \"turret_0\",\n                     \"type\" : \"machine_part\"\n                  },\n                  {\n                     \"id\" : \"rotary_0\",\n                     \"type\" : \"machine_part\"\n                  }\n               ]\n            },\n            {\n               \"setting\" : [ \"check_collisions\" ],\n               \"solids\" : [\n                  {\n                     \"id\" : \"turret_0\",\n                     \"type\" : \"turret_active_tool\"\n                  },\n                  {\n                     \"id\" : \"rotary_0\",\n                     \"type\" : \"machine_part\"\n                  }\n               ]\n            },\n            {\n               \"setting\" : [ \"check_collisions\" ],\n               \"solids\" : [\n                  {\n                     \"id\" : \"turret_0\",\n                     \"type\" : \"turret_inactive_tool\"\n                  },\n                  {\n                     \"id\" : \"rotary_0\",\n                     \"type\" : \"machine_part\"\n                  }\n               ]\n            },\n            {\n               \"setting\" : [ \"check_collisions\" ],\n               \"solids\" : [\n                  {\n                     \"id\" : \"turret_0\",\n                     \"type\" : \"machine_part\"\n                  },\n                  {\n                     \"id\" : \"table\",\n                     \"type\" : \"machine_part\"\n                  }\n               ]\n            },\n            {\n               \"setting\" : [ \"check_collisions\" ],\n               \"solids\" : [\n                  {\n                     \"id\" : \"turret_0\",\n                     \"type\" : \"machine_part\"\n                  },\n                  {\n                     \"id\" : \"table\",\n                     \"type\" : \"stock\"\n                  }\n               ]\n            },\n            {\n               \"setting\" : [ \"check_collisions\" ],\n               \"solids\" : [\n                  {\n                     \"id\" : \"turret_0\",\n                     \"type\" : \"machine_part\"\n                  },\n                  {\n                     \"id\" : \"table\",\n                     \"type\" : \"fixture\"\n                  }\n               ]\n            },\n            {\n               \"setting\" : [ \"check_collisions\" ],\n               \"solids\" : [\n                  {\n                     \"id\" : \"turret_0\",\n                     \"type\" : \"turret_active_tool\"\n                  },\n                  {\n                     \"id\" : \"table\",\n                     \"type\" : \"machine_part\"\n                  }\n               ]\n            },\n            {\n               \"setting\" : [ \"check_collisions\" ],\n               \"solids\" : [\n                  {\n                     \"id\" : \"turret_0\",\n                     \"type\" : \"turret_active_tool\"\n                  },\n                  {\n                     \"id\" : \"table\",\n                     \"type\" : \"stock\"\n                  }\n               ]\n            },\n            {\n               \"setting\" : [ \"check_collisions\" ],\n               \"solids\" : [\n                  {\n                     \"id\" : \"turret_0\",\n                     \"type\" : \"turret_active_tool\"\n                  },\n                  {\n                     \"id\" : \"table\",\n                     \"type\" : \"fixture\"\n                  }\n               ]\n            },\n            {\n               \"setting\" : [ \"check_collisions\" ],\n               \"solids\" : [\n                  {\n                     \"id\" : \"turret_0\",\n                     \"type\" : \"turret_inactive_tool\"\n                  },\n                  {\n                     \"id\" : \"table\",\n                     \"type\" : \"machine_part\"\n                  }\n               ]\n            },\n            {\n               \"setting\" : [ \"check_collisions\" ],\n               \"solids\" : [\n                  {\n                     \"id\" : \"turret_0\",\n                     \"type\" : \"turret_inactive_tool\"\n                  },\n                  {\n                     \"id\" : \"table\",\n                     \"type\" : \"stock\"\n                  }\n               ]\n            },\n            {\n               \"setting\" : [ \"check_collisions\" ],\n               \"solids\" : [\n                  {\n                     \"id\" : \"turret_0\",\n                     \"type\" : \"turret_inactive_tool\"\n                  },\n                  {\n                     \"id\" : \"table\",\n                     \"type\" : \"fixture\"\n                  }\n               ]\n            },\n            {\n               \"setting\" : null,\n               \"solids\" : [\n                  {\n                     \"id\" : \"rotary_0\",\n                     \"type\" : \"machine_part\"\n                  },\n                  {\n                     \"id\" : \"table\",\n                     \"type\" : \"machine_part\"\n                  }\n               ]\n            },\n            {\n               \"setting\" : [ \"check_collisions\" ],\n               \"solids\" : [\n                  {\n                     \"id\" : \"rotary_0\",\n                     \"type\" : \"machine_part\"\n                  },\n                  {\n                     \"id\" : \"table\",\n                     \"type\" : \"stock\"\n                  }\n               ]\n            },\n            {\n               \"setting\" : [ \"check_collisions\" ],\n               \"solids\" : [\n                  {\n                     \"id\" : \"rotary_0\",\n                     \"type\" : \"machine_part\"\n                  },\n                  {\n                     \"id\" : \"table\",\n                     \"type\" : \"fixture\"\n                  }\n               ]\n            },\n            {\n               \"setting\" : null,\n               \"solids\" : [\n                  {\n                     \"id\" : \"linear_2\",\n                     \"type\" : \"machine_part\"\n                  },\n                  {\n                     \"id\" : \"linear_0\",\n                     \"type\" : \"machine_part\"\n                  }\n               ]\n            },\n            {\n               \"setting\" : null,\n               \"solids\" : [\n                  {\n                     \"id\" : \"linear_2\",\n                     \"type\" : \"machine_part\"\n                  },\n                  {\n                     \"id\" : \"linear_1\",\n                     \"type\" : \"machine_part\"\n                  }\n               ]\n            },\n            {\n               \"setting\" : null,\n               \"solids\" : [\n                  {\n                     \"id\" : \"linear_2\",\n                     \"type\" : \"machine_part\"\n                  },\n                  {\n                     \"id\" : \"turret_0\",\n                     \"type\" : \"machine_part\"\n                  }\n               ]\n            },\n            {\n               \"setting\" : null,\n               \"solids\" : [\n                  {\n                     \"id\" : \"linear_2\",\n                     \"type\" : \"machine_part\"\n                  },\n                  {\n                     \"id\" : \"turret_0\",\n                     \"type\" : \"turret_active_tool\"\n                  }\n               ]\n            },\n            {\n               \"setting\" : null,\n               \"solids\" : [\n                  {\n                     \"id\" : \"linear_2\",\n                     \"type\" : \"machine_part\"\n                  },\n                  {\n                     \"id\" : \"turret_0\",\n                     \"type\" : \"turret_inactive_tool\"\n                  }\n               ]\n            },\n            {\n               \"setting\" : null,\n               \"solids\" : [\n                  {\n                     \"id\" : \"linear_0\",\n                     \"type\" : \"machine_part\"\n                  },\n                  {\n                     \"id\" : \"linear_1\",\n                     \"type\" : \"machine_part\"\n                  }\n               ]\n            },\n            {\n               \"setting\" : null,\n               \"solids\" : [\n                  {\n                     \"id\" : \"linear_0\",\n                     \"type\" : \"machine_part\"\n                  },\n                  {\n                     \"id\" : \"turret_0\",\n                     \"type\" : \"machine_part\"\n                  }\n               ]\n            },\n            {\n               \"setting\" : null,\n               \"solids\" : [\n                  {\n                     \"id\" : \"linear_0\",\n                     \"type\" : \"machine_part\"\n                  },\n                  {\n                     \"id\" : \"turret_0\",\n                     \"type\" : \"turret_active_tool\"\n                  }\n               ]\n            },\n            {\n               \"setting\" : null,\n               \"solids\" : [\n                  {\n                     \"id\" : \"linear_0\",\n                     \"type\" : \"machine_part\"\n                  },\n                  {\n                     \"id\" : \"turret_0\",\n                     \"type\" : \"turret_inactive_tool\"\n                  }\n               ]\n            },\n            {\n               \"setting\" : null,\n               \"solids\" : [\n                  {\n                     \"id\" : \"linear_1\",\n                     \"type\" : \"machine_part\"\n                  },\n                  {\n                     \"id\" : \"turret_0\",\n                     \"type\" : \"machine_part\"\n                  }\n               ]\n            },\n            {\n               \"setting\" : null,\n               \"solids\" : [\n                  {\n                     \"id\" : \"linear_1\",\n                     \"type\" : \"machine_part\"\n                  },\n                  {\n                     \"id\" : \"turret_0\",\n                     \"type\" : \"turret_active_tool\"\n                  }\n               ]\n            },\n            {\n               \"setting\" : null,\n               \"solids\" : [\n                  {\n                     \"id\" : \"linear_1\",\n                     \"type\" : \"machine_part\"\n                  },\n                  {\n                     \"id\" : \"turret_0\",\n                     \"type\" : \"turret_inactive_tool\"\n                  }\n               ]\n            }\n         ]\n      }\n   },\n   \"kinematics\" : {\n      \"default\" : {\n         \"conventions\" : {\n            \"rotation\" : \"right-handed\"\n         },\n         \"parts\" : [\n            {\n               \"axis_of_rotation\" : {\n                  \"direction\" : [ 0, 0, -1 ],\n                  \"point\" : [ 0, 0, 0 ]\n               },\n               \"control\" : \"driven\",\n               \"id\" : \"rotary_0\",\n               \"name\" : \"C4\",\n               \"offset\" : [ 0, 0, 0 ],\n               \"parts\" : [\n                  {\n                     \"attach_frame\" : {\n                        \"point\" : [ 0, 0, 0 ],\n                        \"x_direction\" : [ 1, 0, 0 ],\n                        \"z_direction\" : [ 0, 0, 1 ]\n                     },\n                     \"display_name\" : \"C4\",\n                     \"id\" : \"table\",\n                     \"spindle\" : {\n                        \"max_speed\" : 4000,\n                        \"min_speed\" : 1\n                     },\n                     \"type\" : \"table\"\n                  }\n               ],\n               \"type\" : \"rotary\"\n            },\n            {\n               \"control\" : \"driven\",\n               \"direction\" : [ 0, 0, 1 ],\n               \"home\" : 680,\n               \"id\" : \"linear_2\",\n               \"name\" : \"Z\",\n               \"parts\" : [\n                  {\n                     \"control\" : \"driven\",\n                     \"direction\" : [ 1, 0, 0 ],\n                     \"home\" : 225,\n                     \"id\" : \"linear_0\",\n                     \"name\" : \"X\",\n                     \"parts\" : [\n                        {\n                           \"control\" : \"driven\",\n                           \"direction\" : [ 0, 1, 0 ],\n                           \"id\" : \"linear_1\",\n                           \"name\" : \"Y\",\n                           \"parts\" : [\n                              {\n                                 \"axis_of_rotation\" : {\n                                    \"direction\" : [ 0, 0, -1 ],\n                                    \"point\" : [ 0, 0, 0 ]\n                                 },\n                                 \"control\" : \"ancillary\",\n                                 \"id\" : \"turret_0\",\n                                 \"name\" : \"Turret\",\n                                 \"offset\" : [ 0, 0, 0 ],\n                                 \"parts\" : [\n                                    {\n                                       \"attach_frame\" : {\n                                          \"point\" : [ 0, 0, 0 ],\n                                          \"x_direction\" : [ 1, 0, 0 ],\n                                          \"z_direction\" : [ 0, 0, 1 ]\n                                       },\n                                       \"id\" : \"turret_0_station_1\",\n                                       \"tool_station\" : {\n                                          \"coolants\" : null\n                                       },\n                                       \"type\" : \"head\"\n                                    },\n                                    {\n                                       \"attach_frame\" : {\n                                          \"point\" : [ 0, 0, 0 ],\n                                          \"x_direction\" : [ 1, 0, 0 ],\n                                          \"z_direction\" : [ 0, 0, 1 ]\n                                       },\n                                       \"id\" : \"turret_0_station_2\",\n                                       \"tool_station\" : {\n                                          \"coolants\" : null\n                                       },\n                                       \"type\" : \"head\"\n                                    },\n                                    {\n                                       \"attach_frame\" : {\n                                          \"point\" : [ 0, 0, 0 ],\n                                          \"x_direction\" : [ 1, 0, 0 ],\n                                          \"z_direction\" : [ 0, 0, 1 ]\n                                       },\n                                       \"id\" : \"turret_0_station_3\",\n                                       \"tool_station\" : {\n                                          \"coolants\" : null\n                                       },\n                                       \"type\" : \"head\"\n                                    },\n                                    {\n                                       \"attach_frame\" : {\n                                          \"point\" : [ 0, 0, 0 ],\n                                          \"x_direction\" : [ 1, 0, 0 ],\n                                          \"z_direction\" : [ 0, 0, 1 ]\n                                       },\n                                       \"id\" : \"turret_0_station_4\",\n                                       \"tool_station\" : {\n                                          \"coolants\" : null\n                                       },\n                                       \"type\" : \"head\"\n                                    },\n                                    {\n                                       \"attach_frame\" : {\n                                          \"point\" : [ 0, 0, 0 ],\n                                          \"x_direction\" : [ 1, 0, 0 ],\n                                          \"z_direction\" : [ 0, 0, 1 ]\n                                       },\n                                       \"id\" : \"turret_0_station_5\",\n                                       \"tool_station\" : {\n                                          \"coolants\" : null\n                                       },\n                                       \"type\" : \"head\"\n                                    },\n                                    {\n                                       \"attach_frame\" : {\n                                          \"point\" : [ 0, 0, 0 ],\n                                          \"x_direction\" : [ 1, 0, 0 ],\n                                          \"z_direction\" : [ 0, 0, 1 ]\n                                       },\n                                       \"id\" : \"turret_0_station_6\",\n                                       \"tool_station\" : {\n                                          \"coolants\" : null\n                                       },\n                                       \"type\" : \"head\"\n                                    },\n                                    {\n                                       \"attach_frame\" : {\n                                          \"point\" : [ 0, 0, 0 ],\n                                          \"x_direction\" : [ 1, 0, 0 ],\n                                          \"z_direction\" : [ 0, 0, 1 ]\n                                       },\n                                       \"id\" : \"turret_0_station_7\",\n                                       \"tool_station\" : {\n                                          \"coolants\" : null\n                                       },\n                                       \"type\" : \"head\"\n                                    },\n                                    {\n                                       \"attach_frame\" : {\n                                          \"point\" : [ 0, 0, 0 ],\n                                          \"x_direction\" : [ 1, 0, 0 ],\n                                          \"z_direction\" : [ 0, 0, 1 ]\n                                       },\n                                       \"id\" : \"turret_0_station_8\",\n                                       \"tool_station\" : {\n                                          \"coolants\" : null\n                                       },\n                                       \"type\" : \"head\"\n                                    },\n                                    {\n                                       \"attach_frame\" : {\n                                          \"point\" : [ 0, 0, 0 ],\n                                          \"x_direction\" : [ 1, 0, 0 ],\n                                          \"z_direction\" : [ 0, 0, 1 ]\n                                       },\n                                       \"id\" : \"turret_0_station_9\",\n                                       \"tool_station\" : {\n                                          \"coolants\" : null\n                                       },\n                                       \"type\" : \"head\"\n                                    },\n                                    {\n                                       \"attach_frame\" : {\n                                          \"point\" : [ 0, 0, 0 ],\n                                          \"x_direction\" : [ 1, 0, 0 ],\n                                          \"z_direction\" : [ 0, 0, 1 ]\n                                       },\n                                       \"id\" : \"turret_0_station_10\",\n                                       \"tool_station\" : {\n                                          \"coolants\" : null\n                                       },\n                                       \"type\" : \"head\"\n                                    },\n                                    {\n                                       \"attach_frame\" : {\n                                          \"point\" : [ 0, 0, 0 ],\n                                          \"x_direction\" : [ 1, 0, 0 ],\n                                          \"z_direction\" : [ 0, 0, 1 ]\n                                       },\n                                       \"id\" : \"turret_0_station_11\",\n                                       \"tool_station\" : {\n                                          \"coolants\" : null\n                                       },\n                                       \"type\" : \"head\"\n                                    },\n                                    {\n                                       \"attach_frame\" : {\n                                          \"point\" : [ 0, 0, 0 ],\n                                          \"x_direction\" : [ 1, 0, 0 ],\n                                          \"z_direction\" : [ 0, 0, 1 ]\n                                       },\n                                       \"id\" : \"turret_0_station_12\",\n                                       \"tool_station\" : {\n                                          \"coolants\" : null\n                                       },\n                                       \"type\" : \"head\"\n                                    }\n                                 ],\n                                 \"spindle\" : {\n                                    \"max_speed\" : 4000,\n                                    \"min_speed\" : 0\n                                 },\n                                 \"tool_station\" : {\n                                    \"coolants\" : [ \"flood\", \"flood_through_tool\", \"through_tool\" ],\n                                    \"max_tool_diameter\" : 0,\n                                    \"max_tool_length\" : 0\n                                 },\n                                 \"turret\" : {\n                                    \"index_count\" : 12\n                                 },\n                                 \"type\" : \"rotary\"\n                              }\n                           ],\n                           \"type\" : \"linear\"\n                        }\n                     ],\n                     \"type\" : \"linear\"\n                  }\n               ],\n               \"type\" : \"linear\"\n            }\n         ],\n         \"units\" : {\n            \"angle\" : \"degrees\",\n            \"length\" : \"mm\"\n         }\n      }\n   },\n   \"machining\" : {\n      \"default\" : {\n         \"feedrate_ratio\" : 1,\n         \"tool_change_time\" : 15\n      }\n   },\n   \"multiaxis\" : {\n      \"default\" : {\n         \"compensate_tool_length\" : true,\n         \"feedrate\" : {\n            \"BPW_ratio\" : 1,\n            \"max_feedrate\" : 9999.9899999999998,\n            \"method\" : \"FPM\",\n            \"output_tolerance\" : 0.5,\n            \"type\" : \"combination\"\n         },\n         \"retract_and_reconfigure\" : {\n            \"enabled\" : false,\n            \"retract_preference\" : \"RetractAtApex\",\n            \"rewind_preference\" : \"RewindAtLinear\",\n            \"rewind_strategy\" : \"MinimizeRewinds\",\n            \"safe_plunge_feedrate\" : 250,\n            \"safe_retract_distance\" : 25,\n            \"safe_retract_feedrate\" : 500,\n            \"stock_expansion\" : [ 2.5, 2.5, 2.5 ]\n         },\n         \"singularity\" : {\n            \"adjust\" : true,\n            \"angle\" : 0.17453292519943295,\n            \"cone\" : 0.05235987755982989,\n            \"method\" : \"off\",\n            \"tolerance\" : 0.040000000000000001\n         },\n         \"use_tilted_workplane\" : true,\n         \"virtual_tool_tip\" : false\n      }\n   },\n   \"post\" : {\n      \"default\" : {\n         \"path\" : \"cloud://Actueel/DMG_EcoTurn_V3.cps\"\n      }\n   },\n   \"post_settings\" : {\n      \"default\" : {\n         \"path\" : \"cloud://Actueel/DMG_EcoTurn_V3.cps\"\n      }\n   },\n   \"tooling\" : {\n      \"default\" : {\n         \"has_tool_changer\" : true,\n         \"number_of_tools\" : 12,\n         \"supports_tool_preload\" : false\n      }\n   }\n}\n\n")
+!DEBUG: onParameter('stock-type', "cylinder")
+!DEBUG: onParameter('stock-diameter', 95)
+!DEBUG: onParameter('stock', "((-47.5, -47.5, -237), (47.5, 47.5, 1))")
+!DEBUG: onParameter('stock-lower-x', -47.5)
+!DEBUG: onParameter('stock-lower-y', -47.5)
+!DEBUG: onParameter('stock-lower-z', -237)
+!DEBUG: onParameter('stock-upper-x', 47.5)
+!DEBUG: onParameter('stock-upper-y', 47.5)
+!DEBUG: onParameter('stock-upper-z', 1)
+!DEBUG: onParameter('part-lower-x', -42.5)
+!DEBUG: onParameter('part-lower-y', -45)
+!DEBUG: onParameter('part-lower-z', -235)
+!DEBUG: onParameter('part-upper-x', 42.5)
+!DEBUG: onParameter('part-upper-y', 45)
+!DEBUG: onParameter('part-upper-z', 0)
+!DEBUG: onParameter('chuck-front-mode', "model front")
+!DEBUG: onParameter('chuck-front-offset', -250)
+!DEBUG: onParameter('areBothSpindlesGrabbed', 0)
+!DEBUG: onParameter('notes', "")
+!DEBUG: onParameter('operation-strategy', "turningThread")
+!DEBUG: onParameter('operation-comment', "Thread1")
+!DEBUG: onParameter('autodeskcam:operation-id', 9)
+!DEBUG: onParameter('leads-supported', 1)
+!DEBUG: onParameter('autodeskcam:path', "Setups\\Setup1\\Thread1")
+!DEBUG: onParameter('operation:is2DStrategy', 0)
+!DEBUG: onParameter('operation:is3DStrategy', 0)
+!DEBUG: onParameter('operation:isRoughingStrategy', 1)
+!DEBUG: onParameter('operation:isFinishingStrategy', 0)
+!DEBUG: onParameter('operation:isMillingStrategy', 0)
+!DEBUG: onParameter('operation:isTurningStrategy', 1)
+!DEBUG: onParameter('operation:isJetStrategy', 0)
+!DEBUG: onParameter('operation:isAdditiveStrategy', 0)
+!DEBUG: onParameter('operation:isProbingStrategy', 0)
+!DEBUG: onParameter('operation:isInspectionStrategy', 0)
+!DEBUG: onParameter('operation:isDrillingStrategy', 0)
+!DEBUG: onParameter('operation:isHoleMillingStrategy', 0)
+!DEBUG: onParameter('operation:isThreadStrategy', 0)
+!DEBUG: onParameter('operation:isSamplingStrategy', 0)
+!DEBUG: onParameter('operation:isRotaryStrategy', 0)
+!DEBUG: onParameter('operation:isSubspindleStrategy', 0)
+!DEBUG: onParameter('operation:isSurfaceStrategy', 0)
+!DEBUG: onParameter('operation:isCheckSurfaceStrategy', 0)
+!DEBUG: onParameter('operation:isMultiAxisStrategy', 0)
+!DEBUG: onParameter('operation:advancedMode', 0)
+!DEBUG: onParameter('operation:betaMode', 0)
+!DEBUG: onParameter('operation:alphaMode', 0)
+!DEBUG: onParameter('operation:isXpress', 0)
+!DEBUG: onParameter('operation:licenseMultiaxis', 1)
+!DEBUG: onParameter('operation:license3D', 1)
+!DEBUG: onParameter('operation:metric', 1)
+!DEBUG: onParameter('operation:isAssemblyDocument', 1)
+!DEBUG: onParameter('operation:context', "operation")
+!DEBUG: onParameter('operation:strategy', "turningThread")
+!DEBUG: onParameter('operation:operation_description', "")
+!DEBUG: onParameter('operation:isOperationTemplate', 0)
+!DEBUG: onParameter('operation:isFeatureTemplate', 0)
+!DEBUG: onParameter('operation:tool_type', "turning threading")
+!DEBUG: onParameter('operation:undercut', 0)
+!DEBUG: onParameter('operation:tool_isTurning', 1)
+!DEBUG: onParameter('operation:tool_isMill', 0)
+!DEBUG: onParameter('operation:tool_isDrill', 0)
+!DEBUG: onParameter('operation:tool_isJet', 0)
+!DEBUG: onParameter('operation:tool_isDepositing', 0)
+!DEBUG: onParameter('operation:tool_taperedType', "tapered_bull_nose")
+!DEBUG: onParameter('operation:tool_unit', "millimeters")
+!DEBUG: onParameter('operation:tool_number', 7)
+!DEBUG: onParameter('operation:tool_diameterOffset', 7)
+!DEBUG: onParameter('operation:tool_lengthOffset', 7)
+!DEBUG: onParameter('operation:tool_compensationOffset', 1)
+!DEBUG: onParameter('operation:tool_turret', 0)
+!DEBUG: onParameter('operation:tool_manualToolChange', 0)
+!DEBUG: onParameter('operation:tool_breakControl', 0)
+!DEBUG: onParameter('operation:tool_live', 1)
+!DEBUG: onParameter('operation:tool_material', "carbide")
+!DEBUG: onParameter('operation:tool_description', "DRAADSNIJ P6MM UITW")
+!DEBUG: onParameter('operation:tool_comment', "")
+!DEBUG: onParameter('operation:tool_vendor', "")
+!DEBUG: onParameter('operation:tool_productId', "")
+!DEBUG: onParameter('operation:tool_productLink', "")
+!DEBUG: onParameter('operation:tool_insertID', "")
+!DEBUG: onParameter('operation:tool_autoInsertID', 1)
+!DEBUG: onParameter('operation:tool_holderID', "")
+!DEBUG: onParameter('operation:tool_autoHolderID', 1)
+!DEBUG: onParameter('operation:tool_insertType', "thread iso triple")
+!DEBUG: onParameter('operation:tool_holderType', "thread straight")
+!DEBUG: onParameter('operation:tool_compensation', "tip tangent")
+!DEBUG: onParameter('operation:tool_grooveCompOppositeEdge', 0)
+!DEBUG: onParameter('operation:tool_angle', 0)
+!DEBUG: onParameter('operation:tool_reliefAngle', 0)
+!DEBUG: onParameter('operation:tool_crossSection', "T")
+!DEBUG: onParameter('operation:tool_tolerance', "M")
+!DEBUG: onParameter('operation:tool_insertAngle', 0)
+!DEBUG: onParameter('operation:tool_grooveWidth', 0)
+!DEBUG: onParameter('operation:tool_insertWidth', 0)
+!DEBUG: onParameter('operation:tool_headLength', 0)
+!DEBUG: onParameter('operation:tool_thickness', 4.7625)
+!DEBUG: onParameter('operation:tool_internalThread', 0)
+!DEBUG: onParameter('operation:tool_sideCutting', 1)
+!DEBUG: onParameter('operation:tool_endCutting', 1)
+!DEBUG: onParameter('operation:tool_leadingAngle', 0)
+!DEBUG: onParameter('operation:tool_trailingAngle', 0)
+!DEBUG: onParameter('operation:tool_endAngle', 0)
+!DEBUG: onParameter('operation:tool_cuttingWidth', 25)
+!DEBUG: onParameter('operation:tool_holderHeadLength', 32)
+!DEBUG: onParameter('operation:tool_holderOverallLength', 125)
+!DEBUG: onParameter('operation:tool_roundShank', 0)
+!DEBUG: onParameter('operation:tool_shankWidth', 25)
+!DEBUG: onParameter('operation:tool_shankHeight', 25)
+!DEBUG: onParameter('operation:tool_sideAngle', 0)
+!DEBUG: onParameter('operation:tool_hand', "R")
+!DEBUG: onParameter('operation:tool_clamping', "D")
+!DEBUG: onParameter('operation:tool_shaftAxisAngle', 0)
+!DEBUG: onParameter('operation:tool_diameter', 10)
+!DEBUG: onParameter('operation:tool_maximumCuttingDiameter', 0)
+!DEBUG: onParameter('operation:tool_tipDiameter', 10)
+!DEBUG: onParameter('operation:tool_tipOffset', 0)
+!DEBUG: onParameter('operation:tool_cornerRadius', 0)
+!DEBUG: onParameter('operation:tool_inclusiveAngle', 0)
+!DEBUG: onParameter('operation:tool_taperAngle', 0)
+!DEBUG: onParameter('operation:tool_tipAngle', 0)
+!DEBUG: onParameter('operation:tool_threadTipType', "round")
+!DEBUG: onParameter('operation:tool_threadTipWidth', 0)
+!DEBUG: onParameter('operation:tool_threadTipRadius', 0.289)
+!DEBUG: onParameter('operation:tool_threadProfileAngle', 60)
+!DEBUG: onParameter('operation:tool_threadTipDistance', 0.289)
+!DEBUG: onParameter('operation:tool_tipLength', 0)
+!DEBUG: onParameter('operation:tool_fluteLength', 20)
+!DEBUG: onParameter('operation:tool_shoulderLength', 20)
+!DEBUG: onParameter('operation:tool_bodyLength', 40)
+!DEBUG: onParameter('operation:tool_overallLength', 27)
+!DEBUG: onParameter('operation:tool_shaftDiameter', 10)
+!DEBUG: onParameter('operation:tool_segmentHeight', 5)
+!DEBUG: onParameter('operation:tool_segmentDiameterLower', 20)
+!DEBUG: onParameter('operation:tool_segmentDiameterUpper', 20)
+!DEBUG: onParameter('operation:tool_shaftSegmentHeight', 10)
+!DEBUG: onParameter('operation:tool_shaftSegmentDiameterLower', 10)
+!DEBUG: onParameter('operation:tool_shaftSegmentDiameterUpper', 10)
+!DEBUG: onParameter('operation:tool_threadPitch', 6)
+!DEBUG: onParameter('operation:tool_maximumThreadPitch', 6)
+!DEBUG: onParameter('operation:tool_minimumThreadPitch', 6)
+!DEBUG: onParameter('operation:tool_numberOfTeeth', 0)
+!DEBUG: onParameter('operation:tool_numberOfFlutes', 3)
+!DEBUG: onParameter('operation:tool_shoulderDiameter', 10)
+!DEBUG: onParameter('operation:tool_upperRadius', 1)
+!DEBUG: onParameter('operation:tool_profileRadius', 100)
+!DEBUG: onParameter('operation:tool_lowerRadius', 1)
+!DEBUG: onParameter('operation:tool_axialDistance', 1)
+!DEBUG: onParameter('operation:tool_chamferWidth', 1)
+!DEBUG: onParameter('operation:tool_chamferAngle', 45)
+!DEBUG: onParameter('operation:useTailstock', 0)
+!DEBUG: onParameter('operation:goHomeMode', "begin end")
+!DEBUG: onParameter('operation:turningMode', "outer")
+!DEBUG: onParameter('operation:machineInside', 0)
+!DEBUG: onParameter('operation:turnInNegativeDiameter', 0)
+!DEBUG: onParameter('operation:spindleRotation', "forward")
+!DEBUG: onParameter('operation:tool_useConstantSurfaceSpeed', 0)
+!DEBUG: onParameter('operation:tool_spindleSpeed', 200)
+!DEBUG: onParameter('operation:tool_stockDiameter', 25)
+!DEBUG: onParameter('operation:tool_surfaceSpeed', 200000)
+!DEBUG: onParameter('operation:tool_maximumSpindleSpeed', 5000)
+!DEBUG: onParameter('operation:tool_useFeedPerRevolution', 1)
+!DEBUG: onParameter('operation:tool_feedCutting', 25.4)
+!DEBUG: onParameter('operation:tool_feedCuttingRel', 0.127)
+!DEBUG: onParameter('operation:tool_feedEntry', 25.4)
+!DEBUG: onParameter('operation:tool_feedEntryRel', 0.127)
+!DEBUG: onParameter('operation:tool_feedExit', 25.4)
+!DEBUG: onParameter('operation:tool_feedExitRel', 0.127)
+!DEBUG: onParameter('operation:tool_clockwise', 1)
+!DEBUG: onParameter('operation:tool_coolant', "flood")
+!DEBUG: onParameter('operation:featureOperationId', "none")
+!DEBUG: onParameter('operation:surfaceZHigh', 0)
+!DEBUG: onParameter('operation:surfaceZLow', -235)
+!DEBUG: onParameter('operation:surfaceXLow', -42.5)
+!DEBUG: onParameter('operation:surfaceXHigh', 42.5)
+!DEBUG: onParameter('operation:surfaceYLow', -45)
+!DEBUG: onParameter('operation:surfaceYHigh', 45)
+!DEBUG: onParameter('operation:stockZHigh', 1)
+!DEBUG: onParameter('operation:stockZLow', -237)
+!DEBUG: onParameter('operation:stockXLow', -47.5)
+!DEBUG: onParameter('operation:stockXHigh', 47.5)
+!DEBUG: onParameter('operation:stockYLow', -47.5)
+!DEBUG: onParameter('operation:stockYHigh', 47.5)
+!DEBUG: onParameter('operation:auto_hasThreadData', 0)
+!DEBUG: onParameter('operation:auto_threadDataState', "no data")
+!DEBUG: onParameter('operation:auto_hasThreadLengthData', 0)
+!DEBUG: onParameter('operation:threadDefinition', "manual")
+!DEBUG: onParameter('operation:threadingHand', "right")
+!DEBUG: onParameter('operation:threadPitch', 6)
+!DEBUG: onParameter('operation:threadDepth', 1)
+!DEBUG: onParameter('operation:threadType', "ISO Metric profile")
+!DEBUG: onParameter('operation:threadSize', "auto")
+!DEBUG: onParameter('operation:threadDesignation', "auto")
+!DEBUG: onParameter('operation:threadClass', "auto")
+!DEBUG: onParameter('operation:threadStandardHand', "right")
+!DEBUG: onParameter('operation:threadInfoType', "")
+!DEBUG: onParameter('operation:threadInfoDesignation', "")
+!DEBUG: onParameter('operation:threadInfoClass', "")
+!DEBUG: onParameter('operation:threadInfoHand', "right")
+!DEBUG: onParameter('operation:threadInfoPitch', 0)
+!DEBUG: onParameter('operation:threadInfoMajorDiameter', 0)
+!DEBUG: onParameter('operation:threadInfoPitchDiameter', 0)
+!DEBUG: onParameter('operation:threadInfoMinorDiameter', 0)
+!DEBUG: onParameter('operation:frontHeight_mode', "model front")
+!DEBUG: onParameter('operation:frontHeight_offset', 5)
+!DEBUG: onParameter('operation:frontHeight_value', 5)
+!DEBUG: onParameter('operation:frontHeight_absolute', 1)
+!DEBUG: onParameter('operation:backHeight_mode', "selection back")
+!DEBUG: onParameter('operation:backHeight_offset', 0.5)
+!DEBUG: onParameter('operation:backHeight_value', -54.5)
+!DEBUG: onParameter('operation:backHeight_absolute', 1)
+!DEBUG: onParameter('operation:outerClearanceEnabled', 1)
+!DEBUG: onParameter('operation:outerClearance_mode', "from stock od")
+!DEBUG: onParameter('operation:outerClearanceFromOutermost_checkStock', "outer diameter")
+!DEBUG: onParameter('operation:outerClearanceFromInnermost_checkStock', "inner diameter")
+!DEBUG: onParameter('operation:outerClearanceFromOutermost_checkModel', "outer diameter")
+!DEBUG: onParameter('operation:outerClearanceFromInnermost_checkModel', "inner diameter")
+!DEBUG: onParameter('operation:outerClearance_offset', 10)
+!DEBUG: onParameter('operation:outerClearance_direct', 115)
+!DEBUG: onParameter('operation:outerClearance_value', 57.5)
+!DEBUG: onParameter('operation:outerClearance_absolute', 1)
+!DEBUG: onParameter('operation:outerRadius_mode', "from stock od")
+!DEBUG: onParameter('operation:outerRadiusFromOutermost_checkStock', "outer diameter")
+!DEBUG: onParameter('operation:outerRadiusFromInnermost_checkStock', "inner diameter")
+!DEBUG: onParameter('operation:outerRadiusFromOutermost_checkModel', "outer diameter")
+!DEBUG: onParameter('operation:outerRadiusFromInnermost_checkModel', "inner diameter")
+!DEBUG: onParameter('operation:outerRadius_offset', 0)
+!DEBUG: onParameter('operation:outerRadius_direct', 95)
+!DEBUG: onParameter('operation:outerRadius_value', 47.5)
+!DEBUG: onParameter('operation:outerRadius_absolute', 1)
+!DEBUG: onParameter('operation:innerRadius_mode', "from stock id")
+!DEBUG: onParameter('operation:innerRadiusFromOutermost_checkStock', "outer diameter")
+!DEBUG: onParameter('operation:innerRadiusFromInnermost_checkStock', "inner diameter")
+!DEBUG: onParameter('operation:innerRadiusFromOutermost_checkModel', "outer diameter")
+!DEBUG: onParameter('operation:innerRadiusFromInnermost_checkModel', "inner diameter")
+!DEBUG: onParameter('operation:innerRadius_offset', 0)
+!DEBUG: onParameter('operation:innerRadius_direct', 0)
+!DEBUG: onParameter('operation:innerRadius_value', 0)
+!DEBUG: onParameter('operation:innerRadius_absolute', 1)
+!DEBUG: onParameter('operation:innerClearanceEnabled', 0)
+!DEBUG: onParameter('operation:innerClearance_mode', "from stock id")
+!DEBUG: onParameter('operation:innerClearanceFromOutermost_checkStock', "outer diameter")
+!DEBUG: onParameter('operation:innerClearanceFromInnermost_checkStock', "inner diameter")
+!DEBUG: onParameter('operation:innerClearanceFromOutermost_checkModel', "outer diameter")
+!DEBUG: onParameter('operation:innerClearanceFromInnermost_checkModel', "inner diameter")
+!DEBUG: onParameter('operation:innerClearance_offset', -10)
+!DEBUG: onParameter('operation:innerClearance_direct', 0)
+!DEBUG: onParameter('operation:innerClearance_value', 0)
+!DEBUG: onParameter('operation:innerClearance_absolute', 0)
+!DEBUG: onParameter('operation:clearanceHeight_value', 57.5)
+!DEBUG: onParameter('operation:retractHeight_value', 57.5)
+!DEBUG: onParameter('operation:tolerance', 0.01)
+!DEBUG: onParameter('operation:contourTolerance', 0.005)
+!DEBUG: onParameter('operation:calculationTolerance', 0.01)
+!DEBUG: onParameter('operation:chainingTolerance', 0.01)
+!DEBUG: onParameter('operation:gougingTolerance', 0.01)
+!DEBUG: onParameter('operation:doMultipleThreads', 0)
+!DEBUG: onParameter('operation:numberOfThreads', 2)
+!DEBUG: onParameter('operation:infeedMode', "constant")
+!DEBUG: onParameter('operation:infeedAngle', 0)
+!DEBUG: onParameter('operation:fadeThreadEnd', 0)
+!DEBUG: onParameter('operation:useCycle', 0)
+!DEBUG: onParameter('operation:firstPassDepth', 0.2)
+!DEBUG: onParameter('operation:numberOfStepdowns', 5)
+!DEBUG: onParameter('operation:nullPass', 0)
+!DEBUG: onParameter('operation:xStockToLeave', 0)
+!DEBUG: onParameter('operation:useCombinedFilter', 1)
+!DEBUG: onParameter('operation:retractionPolicy', "full")
+!DEBUG: onParameter('operation:threadRetractClearance', 1)
+!DEBUG: onParameter('operation:highFeedrateMode', "disabled")
+!DEBUG: onParameter('operation:highFeedrate', 25.4)
+!DEBUG: onParameter('operation:highFeedratePerRev', 25.4)
+!DEBUG: onParameter('operation:approachZ', "safe Z")
+!DEBUG: onParameter('operation:retractZ', "safe Z")
+!DEBUG: onParameter('operation:overrideSafeZ', 0)
+!DEBUG: onParameter('operation:safeZ_mode', "from wcs")
+!DEBUG: onParameter('operation:safeZ_offset', 0)
+!DEBUG: onParameter('operation:safeZ_value', 0)
+!DEBUG: onParameter('operation:safeZ_absolute', 1)
+!DEBUG: onParameter('operation:connections_retraction_type', "full")
+!DEBUG: onParameter('operation:connectionMoveClearanceAreaType', "cylinder")
+!DEBUG: onParameter('operation:connectionMoveClearanceArea_orientation_mode', "setupAxisZ")
+!DEBUG: onParameter('operation:connectionMoveClearanceArea_orientation_flipAxis', 0)
+!DEBUG: onParameter('operation:connectionMoveClearanceArea_orientation_flipZ', 0)
+!DEBUG: onParameter('operation:connectionMoveClearanceArea_orientation_flipX', 0)
+!DEBUG: onParameter('operation:connectionMoveClearanceArea_orientation_axesZX_unselected_default', "wcs")
+!DEBUG: onParameter('operation:connectionMoveClearanceArea_orientation_flipY', 0)
+!DEBUG: onParameter('operation:connectionMoveClearanceArea_orientation_axesZY_unselected_default', "wcs")
+!DEBUG: onParameter('operation:connectionMoveClearanceArea_flipDirection', 0)
+!DEBUG: onParameter('operation:connectionMoveClearanceAreaUp_orientation_mode', "setupAxisZ")
+!DEBUG: onParameter('operation:connectionMoveClearanceAreaUp_orientation_flipAxis', 0)
+!DEBUG: onParameter('operation:connectionMoveClearanceAreaUp_flipDirection', 0)
+!DEBUG: onParameter('operation:connectionMoveClearanceArea_origin_mode', "jobOrigin")
+!DEBUG: onParameter('operation:connectionMoveClearanceAreaHeight_mode', "from stock top")
+!DEBUG: onParameter('operation:connectionMoveClearanceAreaHeight_offset', 10)
+!DEBUG: onParameter('operation:connectionMoveClearanceAreaHeight_value', 0)
+!DEBUG: onParameter('operation:connectionMoveClearanceAreaHeight_absolute', 0)
+!DEBUG: onParameter('operation:connectionMoveClearanceAreaCylinderRadius_mode', "from stock od")
+!DEBUG: onParameter('operation:connectionMoveClearanceAreaCylinderRadiusFromOutermost_checkStock', "outer diameter")
+!DEBUG: onParameter('operation:connectionMoveClearanceAreaCylinderRadiusFromOutermost_checkModel', "outer diameter")
+!DEBUG: onParameter('operation:connectionMoveClearanceAreaCylinderRadiusFromOutermost_checkFixture', "outer diameter")
+!DEBUG: onParameter('operation:connectionMoveClearanceAreaCylinderRadius_offset', 10)
+!DEBUG: onParameter('operation:connectionMoveClearanceAreaCylinderRadius_direct', 2)
+!DEBUG: onParameter('operation:connectionMoveClearanceAreaCylinderRadius_value', 1)
+!DEBUG: onParameter('operation:connectionMoveClearanceAreaCylinderRadius_absolute', 1)
+!DEBUG: onParameter('operation:connectionMoveClearanceAreaCylinderCappingMode', "unlimited")
+!DEBUG: onParameter('operation:connectionMoveClearanceAreaCylinderCapPosZHeight_mode', "from stock top")
+!DEBUG: onParameter('operation:connectionMoveClearanceAreaCylinderCapPosZHeight_offset', 10)
+!DEBUG: onParameter('operation:connectionMoveClearanceAreaCylinderCapPosZHeight_value', 0)
+!DEBUG: onParameter('operation:connectionMoveClearanceAreaCylinderCapPosZHeight_absolute', 0)
+!DEBUG: onParameter('operation:connectionMoveClearanceAreaSphereRadius_mode', "from stock od")
+!DEBUG: onParameter('operation:connectionMoveClearanceAreaSphereRadiusFromOutermost_checkStock', "outer diameter")
+!DEBUG: onParameter('operation:connectionMoveClearanceAreaSphereRadiusFromOutermost_checkModel', "outer diameter")
+!DEBUG: onParameter('operation:connectionMoveClearanceAreaSphereRadiusFromOutermost_checkFixture', "outer diameter")
+!DEBUG: onParameter('operation:connectionMoveClearanceAreaSphereRadius_offset', 10)
+!DEBUG: onParameter('operation:connectionMoveClearanceAreaSphereRadius_direct', 2)
+!DEBUG: onParameter('operation:connectionMoveClearanceAreaSphereRadius_value', 1)
+!DEBUG: onParameter('operation:connectionMoveClearanceAreaSphereRadius_absolute', 1)
+!DEBUG: onParameter('operation:connectionMoveClearanceAreaCuboid_mode', "from stock box")
+!DEBUG: onParameter('operation:connectionMoveClearanceAreaCuboid_symmetricalOffsets', 1)
+!DEBUG: onParameter('operation:connectionMoveClearanceAreaCuboidPosX_value', 0)
+!DEBUG: onParameter('operation:connectionMoveClearanceAreaCuboidPosX_offset', 10)
+!DEBUG: onParameter('operation:connectionMoveClearanceAreaCuboidNegX_value', 0)
+!DEBUG: onParameter('operation:connectionMoveClearanceAreaCuboidNegX_offset', 10)
+!DEBUG: onParameter('operation:connectionMoveClearanceAreaCuboidPosY_value', 0)
+!DEBUG: onParameter('operation:connectionMoveClearanceAreaCuboidPosY_offset', 10)
+!DEBUG: onParameter('operation:connectionMoveClearanceAreaCuboidNegY_value', 0)
+!DEBUG: onParameter('operation:connectionMoveClearanceAreaCuboidNegY_offset', 10)
+!DEBUG: onParameter('operation:connectionMoveClearanceAreaCuboidPosZ_value', 0)
+!DEBUG: onParameter('operation:connectionMoveClearanceAreaCuboidPosZ_offset', 10)
+!DEBUG: onParameter('operation:connectionMoveClearanceAreaCuboidNegZ_value', 0)
+!DEBUG: onParameter('operation:connectionMoveClearanceAreaCuboidNegZ_offset', 10)
+!DEBUG: onParameter('operation:use_tool_stepdown', 0)
+!DEBUG: onParameter('operation:tool_stepdown', 18)
+!DEBUG: onParameter('operation:tool_finishingStepdown', 0.2)
+!DEBUG: onParameter('operation:use_tool_stepover', 0)
+!DEBUG: onParameter('operation:tool_stepover', 3)
+!DEBUG: onParameter('operation:tool_finishingStepover', 1)
+!DEBUG: onParameter('operation:tool_rampType', "helix")
+!DEBUG: onParameter('operation:use_tool_depthOfCut', 0)
+!DEBUG: onParameter('operation:tool_depthOfCut', 1)
+!DEBUG: onParameter('operation:tool_feed_speed_presetName', "P - S355")
+!DEBUG: onParameter('movement:lead_in', 0.127)
+!DEBUG: onParameter('movement:cutting', 6)
+!DEBUG: onParameter('movement:lead_out', 0.127)
+!DEBUG: onParameter('movement:transition', 6)
+!DEBUG: onParameter('movement:direct', 6)
+!DEBUG: onParameter('movement:helix_ramp', 0)
+!DEBUG: onParameter('movement:profile_ramp', 0)
+!DEBUG: onParameter('movement:zigzag_ramp', 0)
+!DEBUG: onParameter('movement:ramp', 0)
+!DEBUG: onParameter('movement:plunge', 0)
+!DEBUG: onParameter('movement:predrill', 6)
+!DEBUG: onParameter('movement:extended', 6)
+!DEBUG: onParameter('movement:reduced', 6)
+!DEBUG: onParameter('movement:finish_cutting', 0)
+!DEBUG: onParameter('movement:high_feed', 25.4)
+!DEBUG: onParameter('movement:depositing', 0)
+!DEBUG: onParameter('movement:connection', 0)
+!DEBUG: onParameter('movement:drill_breakthrough', 0)
+!DEBUG: onParameter('movement:gun_drill_positioning', 0)
+!DEBUG: onParameter('movement:guided_lead', 0.127)
+!DEBUG: onParameter('movement:guided_rapid', 0.127)
+!DEBUG: onSection()
+!DEBUG: 1 DMG_EcoTurn_V3.cps:728
+!DEBUG: 2 DMG_EcoTurn_V3.cps:1213
+!DEBUG: 3 DMG_EcoTurn_V3.cps:2033
+; |                             JOB INFO                              |
+!DEBUG: 1 DMG_EcoTurn_V3.cps:728
+!DEBUG: 2 DMG_EcoTurn_V3.cps:1214
+!DEBUG: 3 DMG_EcoTurn_V3.cps:2033
+; +----------------------+--------------------------------------------+
+!DEBUG: 1 DMG_EcoTurn_V3.cps:728
+!DEBUG: 2 DMG_EcoTurn_V3.cps:1215
+!DEBUG: 3 DMG_EcoTurn_V3.cps:2033
+; | PART                 | PART: 1703-0000-0056-1 - Bolt 74x155-M48x2 |
+!DEBUG: 1 DMG_EcoTurn_V3.cps:728
+!DEBUG: 2 DMG_EcoTurn_V3.cps:1216
+!DEBUG: 3 DMG_EcoTurn_V3.cps:2033
+; | PROGRAM              | PROG: Setup1                               |
+!DEBUG: 1 DMG_EcoTurn_V3.cps:728
+!DEBUG: 2 DMG_EcoTurn_V3.cps:1217
+!DEBUG: 3 DMG_EcoTurn_V3.cps:2033
+; | TIJD                 | 22-9-2026, 09:54:21                        |
+!DEBUG: 1 DMG_EcoTurn_V3.cps:728
+!DEBUG: 2 DMG_EcoTurn_V3.cps:1218
+!DEBUG: 3 DMG_EcoTurn_V3.cps:2033
+; | UITSTEEKLENGTE       | 250 mm                                     |
+!DEBUG: 1 DMG_EcoTurn_V3.cps:728
+!DEBUG: 2 DMG_EcoTurn_V3.cps:1219
+!DEBUG: 3 DMG_EcoTurn_V3.cps:2033
+; | NULPUNT              | 410 mm                                     |
+!DEBUG: 1 DMG_EcoTurn_V3.cps:728
+!DEBUG: 2 DMG_EcoTurn_V3.cps:1220
+!DEBUG: 3 DMG_EcoTurn_V3.cps:2033
+; | WERKSTUK LEN. +3MM   | 238 mm                                     |
+!DEBUG: 1 DMG_EcoTurn_V3.cps:728
+!DEBUG: 2 DMG_EcoTurn_V3.cps:1221
+!DEBUG: 3 DMG_EcoTurn_V3.cps:2033
+; | STOCK DIAMETER       | 95 mm                                      |
+!DEBUG: 1 DMG_EcoTurn_V3.cps:728
+!DEBUG: 2 DMG_EcoTurn_V3.cps:1222
+!DEBUG: 3 DMG_EcoTurn_V3.cps:2033
+; | AANSLAG LENGTE       | 1535 mm                                    |
+!DEBUG: 1 DMG_EcoTurn_V3.cps:728
+!DEBUG: 2 DMG_EcoTurn_V3.cps:1223
+!DEBUG: 3 DMG_EcoTurn_V3.cps:2033
+; +----------------------+--------------------------------------------+
+!DEBUG: 1 DMG_EcoTurn_V3.cps:728
+!DEBUG: 2 DMG_EcoTurn_V3.cps:1225
+!DEBUG: 3 DMG_EcoTurn_V3.cps:2033
+; |                               TOOLS                               |
+!DEBUG: 1 DMG_EcoTurn_V3.cps:728
+!DEBUG: 2 DMG_EcoTurn_V3.cps:1239
+!DEBUG: 3 DMG_EcoTurn_V3.cps:2033
+; +------+-------------------------------+------+------+------+-------+
+!DEBUG: 1 DMG_EcoTurn_V3.cps:728
+!DEBUG: 2 DMG_EcoTurn_V3.cps:1240
+!DEBUG: 3 DMG_EcoTurn_V3.cps:2033
+; | SP   | NAME                          | LIVE | D/NR | OHL  | ZMIN  |
+!DEBUG: 1 DMG_EcoTurn_V3.cps:728
+!DEBUG: 2 DMG_EcoTurn_V3.cps:1241
+!DEBUG: 3 DMG_EcoTurn_V3.cps:2033
+; +------+-------------------------------+------+------+------+-------+
+!DEBUG: 1 DMG_EcoTurn_V3.cps:728
+!DEBUG: 2 DMG_EcoTurn_V3.cps:1282
+!DEBUG: 3 DMG_EcoTurn_V3.cps:2033
+; | MAIN | DRAADSNIJ P6MM UITW           | NO   | 7    |      |       |
+!DEBUG: 1 DMG_EcoTurn_V3.cps:728
+!DEBUG: 2 DMG_EcoTurn_V3.cps:1285
+!DEBUG: 3 DMG_EcoTurn_V3.cps:2033
+; +------+-------------------------------+------+------+------+-------+
+!DEBUG: 1 DMG_EcoTurn_V3.cps:1314
+!DEBUG: 2 DMG_EcoTurn_V3.cps:2033
+GROUP_BEGIN(0,"PROG START",0,0)
+!DEBUG: 1 DMG_EcoTurn_V3.cps:712
+!DEBUG: 2 DMG_EcoTurn_V3.cps:1325
+!DEBUG: 3 DMG_EcoTurn_V3.cps:2033
+N10 WORKPIECE(,,,"CYLINDER",192,1,-237,-236,95)
+!DEBUG: 1 DMG_EcoTurn_V3.cps:712
+!DEBUG: 2 DMG_EcoTurn_V3.cps:1332
+!DEBUG: 3 DMG_EcoTurn_V3.cps:2033
+N11 G94 G18
+!DEBUG: 1 DMG_EcoTurn_V3.cps:712
+!DEBUG: 2 DMG_EcoTurn_V3.cps:1333
+!DEBUG: 3 DMG_EcoTurn_V3.cps:2033
+N12 G71
+!DEBUG: 1 DMG_EcoTurn_V3.cps:712
+!DEBUG: 2 DMG_EcoTurn_V3.cps:1335
+!DEBUG: 3 DMG_EcoTurn_V3.cps:2033
+N13 M413
+!DEBUG: 1 DMG_EcoTurn_V3.cps:712
+!DEBUG: 2 DMG_EcoTurn_V3.cps:1336
+!DEBUG: 3 DMG_EcoTurn_V3.cps:2033
+N14 LIMS=1200
+!DEBUG: 1 DMG_EcoTurn_V3.cps:1343
+!DEBUG: 2 DMG_EcoTurn_V3.cps:2033
+GROUP_END(0,0)
+!DEBUG: 1 DMG_EcoTurn_V3.cps:2050
+GROUP_BEGIN(0,"DRAAD UITW DRAADSNIJ P6MM UITW",0,0)
+!DEBUG: 1 DMG_EcoTurn_V3.cps:2054
+
+!DEBUG: 1 DMG_EcoTurn_V3.cps:2055
+R18=ATAN2(((R16-R15)/2),R17)
+!DEBUG: 1 DMG_EcoTurn_V3.cps:712
+!DEBUG: 2 DMG_EcoTurn_V3.cps:2689
+!DEBUG: 3 DMG_EcoTurn_V3.cps:2148
+N15 G53 G0 Y0 D0
+!DEBUG: 1 DMG_EcoTurn_V3.cps:712
+!DEBUG: 2 DMG_EcoTurn_V3.cps:2692
+!DEBUG: 3 DMG_EcoTurn_V3.cps:2148
+N16 G53 X450 D0
+!DEBUG: 1 DMG_EcoTurn_V3.cps:712
+!DEBUG: 2 DMG_EcoTurn_V3.cps:2695
+!DEBUG: 3 DMG_EcoTurn_V3.cps:2148
+N17 G53 Z485 D0
+!DEBUG: 1 DMG_EcoTurn_V3.cps:712
+!DEBUG: 2 DMG_EcoTurn_V3.cps:2698
+!DEBUG: 3 DMG_EcoTurn_V3.cps:2148
+N18 D1
+!DEBUG: 1 DMG_EcoTurn_V3.cps:2161
+
+!DEBUG: 1 DMG_EcoTurn_V3.cps:712
+!DEBUG: 2 DMG_EcoTurn_V3.cps:2167
+N19 MSG ("; Thread1")
+!DEBUG: 1 DMG_EcoTurn_V3.cps:728
+!DEBUG: 2 DMG_EcoTurn_V3.cps:2172
+; DRAADSNIJ P6MM UITW
+!DEBUG: 1 DMG_EcoTurn_V3.cps:712
+!DEBUG: 2 DMG_EcoTurn_V3.cps:723
+!DEBUG: 3 DMG_EcoTurn_V3.cps:2205
+N20 T="DRAADSNIJ P6MM UITW"
+!DEBUG: 1 DMG_EcoTurn_V3.cps:712
+!DEBUG: 2 DMG_EcoTurn_V3.cps:2206
+N21 TC(1)
+!DEBUG: 1 DMG_EcoTurn_V3.cps:712
+!DEBUG: 2 DMG_EcoTurn_V3.cps:2207
+N22 D1
+!DEBUG: 1 DMG_EcoTurn_V3.cps:712
+!DEBUG: 2 DMG_EcoTurn_V3.cps:2213
+N23 DIAMON
+!DEBUG: 1 DMG_EcoTurn_V3.cps:2219
+R18=ATAN2(((R16-R15)/2),R17)
+!DEBUG: 1 DMG_EcoTurn_V3.cps:712
+!DEBUG: 2 DMG_EcoTurn_V3.cps:2220
+N24 $P_PFRAME=CROT(Y,R18)
+!DEBUG: 1 DMG_EcoTurn_V3.cps:712
+!DEBUG: 2 DMG_EcoTurn_V3.cps:3979
+!DEBUG: 3 DMG_EcoTurn_V3.cps:2268
+N25 SETMS(4)
+!DEBUG: 1 DMG_EcoTurn_V3.cps:712
+!DEBUG: 2 DMG_EcoTurn_V3.cps:4003
+!DEBUG: 3 DMG_EcoTurn_V3.cps:2268
+N26 G97 S4=200 M4=3
+!DEBUG: 1 DMG_EcoTurn_V3.cps:712
+!DEBUG: 2 DMG_EcoTurn_V3.cps:2281
+N27 G18 G90 G95
+!DEBUG: 1 DMG_EcoTurn_V3.cps:712
+!DEBUG: 2 DMG_EcoTurn_V3.cps:676
+!DEBUG: 3 DMG_EcoTurn_V3.cps:2283
+N28 G54
+!DEBUG: 1 DMG_EcoTurn_V3.cps:728
+!DEBUG: 2 DMG_EcoTurn_V3.cps:2285
+; Write WCS
+!DEBUG: 1 DMG_EcoTurn_V3.cps:728
+!DEBUG: 2 DMG_EcoTurn_V3.cps:1363
+!DEBUG: 3 DMG_EcoTurn_V3.cps:1374
+!DEBUG: 4 DMG_EcoTurn_V3.cps:2303
+; End of forceABC function
+!DEBUG: 1 DMG_EcoTurn_V3.cps:728
+!DEBUG: 2 DMG_EcoTurn_V3.cps:1376
+!DEBUG: 3 DMG_EcoTurn_V3.cps:2303
+; End of force any function
+!DEBUG: 1 DMG_EcoTurn_V3.cps:712
+!DEBUG: 2 DMG_EcoTurn_V3.cps:3820
+!DEBUG: 3 DMG_EcoTurn_V3.cps:2323
+N29 M108
+!DEBUG: 1 DMG_EcoTurn_V3.cps:728
+!DEBUG: 2 DMG_EcoTurn_V3.cps:2359
+; Normal prepos
+!DEBUG: 1 DMG_EcoTurn_V3.cps:712
+!DEBUG: 2 DMG_EcoTurn_V3.cps:2361
+N30 G0 Y0 Z3
+!DEBUG: 1 DMG_EcoTurn_V3.cps:712
+!DEBUG: 2 DMG_EcoTurn_V3.cps:2362
+N31 X115
+!DEBUG: 1 DMG_EcoTurn_V3.cps:728
+!DEBUG: 2 DMG_EcoTurn_V3.cps:2417
+; Debugging information:
+!DEBUG: 1 DMG_EcoTurn_V3.cps:728
+!DEBUG: 2 DMG_EcoTurn_V3.cps:2418
+; End of OnSection()
+!DEBUG: onRapid(57.5, 0, 3)
+!DEBUG: 1 DMG_EcoTurn_V3.cps:728
+!DEBUG: 2 DMG_EcoTurn_V3.cps:2799
+; End of onRapid()
+!DEBUG: onRapid(57.5, 0, 5)
+!DEBUG: 1 DMG_EcoTurn_V3.cps:712
+!DEBUG: 2 DMG_EcoTurn_V3.cps:2794
+N32 Z5
+!DEBUG: 1 DMG_EcoTurn_V3.cps:728
+!DEBUG: 2 DMG_EcoTurn_V3.cps:2799
+; End of onRapid()
+!DEBUG: onRapid(31.61, 0, 5)
+!DEBUG: 1 DMG_EcoTurn_V3.cps:712
+!DEBUG: 2 DMG_EcoTurn_V3.cps:2794
+N33 X63.22
+!DEBUG: 1 DMG_EcoTurn_V3.cps:728
+!DEBUG: 2 DMG_EcoTurn_V3.cps:2799
+; End of onRapid()
+!DEBUG: onCommand(12)
+!DEBUG: onLinear(31.61, 0, -54.5, 6)
+!DEBUG: 1 DMG_EcoTurn_V3.cps:712
+!DEBUG: 2 DMG_EcoTurn_V3.cps:2816
+N34 G33 Z-54.5 K6
+!DEBUG: onCommand(13)
+!DEBUG: onRapid(57.5, 0, -54.5)
+!DEBUG: 1 DMG_EcoTurn_V3.cps:712
+!DEBUG: 2 DMG_EcoTurn_V3.cps:2794
+N35 G0 X115
+!DEBUG: 1 DMG_EcoTurn_V3.cps:728
+!DEBUG: 2 DMG_EcoTurn_V3.cps:2799
+; End of onRapid()
+!DEBUG: onRapid(57.5, 0, 5)
+!DEBUG: 1 DMG_EcoTurn_V3.cps:712
+!DEBUG: 2 DMG_EcoTurn_V3.cps:2794
+N36 Z5
+!DEBUG: 1 DMG_EcoTurn_V3.cps:728
+!DEBUG: 2 DMG_EcoTurn_V3.cps:2799
+; End of onRapid()
+!DEBUG: onRapid(31.41, 0, 5)
+!DEBUG: 1 DMG_EcoTurn_V3.cps:712
+!DEBUG: 2 DMG_EcoTurn_V3.cps:2794
+N37 X62.82
+!DEBUG: 1 DMG_EcoTurn_V3.cps:728
+!DEBUG: 2 DMG_EcoTurn_V3.cps:2799
+; End of onRapid()
+!DEBUG: onCommand(12)
+!DEBUG: onLinear(31.41, 0, -54.5, 6)
+!DEBUG: 1 DMG_EcoTurn_V3.cps:712
+!DEBUG: 2 DMG_EcoTurn_V3.cps:2816
+N38 G33 Z-54.5 K6
+!DEBUG: onCommand(13)
+!DEBUG: onRapid(57.5, 0, -54.5)
+!DEBUG: 1 DMG_EcoTurn_V3.cps:712
+!DEBUG: 2 DMG_EcoTurn_V3.cps:2794
+N39 G0 X115
+!DEBUG: 1 DMG_EcoTurn_V3.cps:728
+!DEBUG: 2 DMG_EcoTurn_V3.cps:2799
+; End of onRapid()
+!DEBUG: onRapid(57.5, 0, 5)
+!DEBUG: 1 DMG_EcoTurn_V3.cps:712
+!DEBUG: 2 DMG_EcoTurn_V3.cps:2794
+N40 Z5
+!DEBUG: 1 DMG_EcoTurn_V3.cps:728
+!DEBUG: 2 DMG_EcoTurn_V3.cps:2799
+; End of onRapid()
+!DEBUG: onRapid(31.21, 0, 5)
+!DEBUG: 1 DMG_EcoTurn_V3.cps:712
+!DEBUG: 2 DMG_EcoTurn_V3.cps:2794
+N41 X62.42
+!DEBUG: 1 DMG_EcoTurn_V3.cps:728
+!DEBUG: 2 DMG_EcoTurn_V3.cps:2799
+; End of onRapid()
+!DEBUG: onCommand(12)
+!DEBUG: onLinear(31.21, 0, -54.5, 6)
+!DEBUG: 1 DMG_EcoTurn_V3.cps:712
+!DEBUG: 2 DMG_EcoTurn_V3.cps:2816
+N42 G33 Z-54.5 K6
+!DEBUG: onCommand(13)
+!DEBUG: onRapid(57.5, 0, -54.5)
+!DEBUG: 1 DMG_EcoTurn_V3.cps:712
+!DEBUG: 2 DMG_EcoTurn_V3.cps:2794
+N43 G0 X115
+!DEBUG: 1 DMG_EcoTurn_V3.cps:728
+!DEBUG: 2 DMG_EcoTurn_V3.cps:2799
+; End of onRapid()
+!DEBUG: onRapid(57.5, 0, 5)
+!DEBUG: 1 DMG_EcoTurn_V3.cps:712
+!DEBUG: 2 DMG_EcoTurn_V3.cps:2794
+N44 Z5
+!DEBUG: 1 DMG_EcoTurn_V3.cps:728
+!DEBUG: 2 DMG_EcoTurn_V3.cps:2799
+; End of onRapid()
+!DEBUG: onRapid(31.01, 0, 5)
+!DEBUG: 1 DMG_EcoTurn_V3.cps:712
+!DEBUG: 2 DMG_EcoTurn_V3.cps:2794
+N45 X62.02
+!DEBUG: 1 DMG_EcoTurn_V3.cps:728
+!DEBUG: 2 DMG_EcoTurn_V3.cps:2799
+; End of onRapid()
+!DEBUG: onCommand(12)
+!DEBUG: onLinear(31.01, 0, -54.5, 6)
+!DEBUG: 1 DMG_EcoTurn_V3.cps:712
+!DEBUG: 2 DMG_EcoTurn_V3.cps:2816
+N46 G33 Z-54.5 K6
+!DEBUG: onCommand(13)
+!DEBUG: onRapid(57.5, 0, -54.5)
+!DEBUG: 1 DMG_EcoTurn_V3.cps:712
+!DEBUG: 2 DMG_EcoTurn_V3.cps:2794
+N47 G0 X115
+!DEBUG: 1 DMG_EcoTurn_V3.cps:728
+!DEBUG: 2 DMG_EcoTurn_V3.cps:2799
+; End of onRapid()
+!DEBUG: onRapid(57.5, 0, 5)
+!DEBUG: 1 DMG_EcoTurn_V3.cps:712
+!DEBUG: 2 DMG_EcoTurn_V3.cps:2794
+N48 Z5
+!DEBUG: 1 DMG_EcoTurn_V3.cps:728
+!DEBUG: 2 DMG_EcoTurn_V3.cps:2799
+; End of onRapid()
+!DEBUG: onRapid(30.81, 0, 5)
+!DEBUG: 1 DMG_EcoTurn_V3.cps:712
+!DEBUG: 2 DMG_EcoTurn_V3.cps:2794
+N49 X61.62
+!DEBUG: 1 DMG_EcoTurn_V3.cps:728
+!DEBUG: 2 DMG_EcoTurn_V3.cps:2799
+; End of onRapid()
+!DEBUG: onCommand(12)
+!DEBUG: onLinear(30.81, 0, -54.5, 6)
+!DEBUG: 1 DMG_EcoTurn_V3.cps:712
+!DEBUG: 2 DMG_EcoTurn_V3.cps:2816
+N50 G33 Z-54.5 K6
+!DEBUG: onCommand(13)
+!DEBUG: onRapid(57.5, 0, -54.5)
+!DEBUG: 1 DMG_EcoTurn_V3.cps:712
+!DEBUG: 2 DMG_EcoTurn_V3.cps:2794
+N51 G0 X115
+!DEBUG: 1 DMG_EcoTurn_V3.cps:728
+!DEBUG: 2 DMG_EcoTurn_V3.cps:2799
+; End of onRapid()
+!DEBUG: onRapid(57.5, 0, 3)
+!DEBUG: 1 DMG_EcoTurn_V3.cps:712
+!DEBUG: 2 DMG_EcoTurn_V3.cps:2794
+N52 Z3
+!DEBUG: 1 DMG_EcoTurn_V3.cps:728
+!DEBUG: 2 DMG_EcoTurn_V3.cps:2799
+; End of onRapid()
+!DEBUG: onSectionEnd()
+!DEBUG: 1 DMG_EcoTurn_V3.cps:728
+!DEBUG: 2 DMG_EcoTurn_V3.cps:1363
+!DEBUG: 3 DMG_EcoTurn_V3.cps:1374
+!DEBUG: 4 DMG_EcoTurn_V3.cps:4165
+; End of forceABC function
+!DEBUG: 1 DMG_EcoTurn_V3.cps:728
+!DEBUG: 2 DMG_EcoTurn_V3.cps:1376
+!DEBUG: 3 DMG_EcoTurn_V3.cps:4165
+; End of force any function
+!DEBUG: 1 DMG_EcoTurn_V3.cps:712
+!DEBUG: 2 DMG_EcoTurn_V3.cps:4170
+N53 $P_PFRAME=CROT(Y,0)
+!DEBUG: 1 DMG_EcoTurn_V3.cps:712
+!DEBUG: 2 DMG_EcoTurn_V3.cps:4173
+N54 M1
+!DEBUG: 1 DMG_EcoTurn_V3.cps:4176
+GROUP_END(0,0)
+!DEBUG: onClose()
+!DEBUG: 1 DMG_EcoTurn_V3.cps:4183
+GROUP_BEGIN(0,"EINDE PROGRAMMA",0,0)
+!DEBUG: 1 DMG_EcoTurn_V3.cps:4185
+
+!DEBUG: 1 DMG_EcoTurn_V3.cps:712
+!DEBUG: 2 DMG_EcoTurn_V3.cps:3820
+!DEBUG: 3 DMG_EcoTurn_V3.cps:4187
+N55 M109
+!DEBUG: 1 DMG_EcoTurn_V3.cps:712
+!DEBUG: 2 DMG_EcoTurn_V3.cps:2689
+!DEBUG: 3 DMG_EcoTurn_V3.cps:4193
+N56 G53 Y0 D0
+!DEBUG: 1 DMG_EcoTurn_V3.cps:712
+!DEBUG: 2 DMG_EcoTurn_V3.cps:2692
+!DEBUG: 3 DMG_EcoTurn_V3.cps:4193
+N57 G53 X450 D0
+!DEBUG: 1 DMG_EcoTurn_V3.cps:712
+!DEBUG: 2 DMG_EcoTurn_V3.cps:2695
+!DEBUG: 3 DMG_EcoTurn_V3.cps:4193
+N58 G53 Z485 D0
+!DEBUG: 1 DMG_EcoTurn_V3.cps:712
+!DEBUG: 2 DMG_EcoTurn_V3.cps:2698
+!DEBUG: 3 DMG_EcoTurn_V3.cps:4193
+N59 D1
+!DEBUG: 1 DMG_EcoTurn_V3.cps:712
+!DEBUG: 2 DMG_EcoTurn_V3.cps:4195
+N60 M4=5
+!DEBUG: 1 DMG_EcoTurn_V3.cps:4214
+
+!DEBUG: 1 DMG_EcoTurn_V3.cps:712
+!DEBUG: 2 DMG_EcoTurn_V3.cps:4215
+N61 UNCLAMP_S4
+!DEBUG: 1 DMG_EcoTurn_V3.cps:712
+!DEBUG: 2 DMG_EcoTurn_V3.cps:4216
+N62 M18
+!DEBUG: 1 DMG_EcoTurn_V3.cps:712
+!DEBUG: 2 DMG_EcoTurn_V3.cps:4217
+N63 M67
+!DEBUG: 1 DMG_EcoTurn_V3.cps:712
+!DEBUG: 2 DMG_EcoTurn_V3.cps:4219
+N64 M30
+!DEBUG: 1 DMG_EcoTurn_V3.cps:4222
+GROUP_END(0,0)
+!DEBUG: 1 DMG_EcoTurn_V3.cps:4228
+%
