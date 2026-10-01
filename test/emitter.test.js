@@ -138,8 +138,9 @@ near(geo.pitch, 6, 1e-9, "spoed 6 uit operation:threadPitch");
 near(geo.nominalDiameter, 63.62, 1e-9, "nominale diameter = diepste snede + 2x draaddiepte");
 near(geo.startDiameter, 63.72, 1e-9, "startdiameter = nominaal + 0.1");
 near(geo.totalDepth, 1.05, 1e-9, "totale diepte = draaddiepte + 0.05");
-near(geo.threadLength, 54, 1e-9, "draadlichaam 54 mm uit front-/backHeight");
-near(geo.zThreadStart, 0, 1e-9, "draadbegin op Z0");
+near(geo.zMotionStart, 5, 1e-9, "Z-begin uit de positionering van Fusion");
+near(geo.zEnd, -54.5, 1e-9, "Z-eind uit de snijbeweging van Fusion");
+near(geo.frontOffset, 5, 1e-9, "aanloop 5 mm uit frontHeight_offset");
 near(geo.retractDiameter, 115, 1e-9, "vrijloopdiameter 115 uit de rapids van Fusion");
 ok(geo.fusionPasses === 5, "Fusion leverde 5 snedes aan");
 
@@ -164,7 +165,9 @@ ok(retracts.every(function (l) { return l === "G0 X115"; }),
 
 // De laatste snijbeweging moet op einddiepte en op het eind van de draad staan.
 var last = g33[g33.length - 1];
-ok(last === "G33 X61.62 Z-54 K6", "laatste G33 op einddiepte en Z-54: " + last);
+ok(last === "G33 X61.62 Z-54.5 K6", "laatste G33 op einddiepte en op het Z-eind van Fusion: " + last);
+var beyond = g33.filter(function (l) { return parseFloat(/Z(-?[\d.]+)/.exec(l)[1]) < -54.5 - 1e-9; });
+ok(beyond.length === 0, "geen enkele beweging voorbij het Z-eind van Fusion");
 
 // Geen enkele X mag dieper gaan dan de einddiepte van Fusion.
 var tooDeep = g33.filter(function (l) { return parseFloat(/X(-?[\d.]+)/.exec(l)[1]) < 61.62 - 1e-9; });
@@ -174,6 +177,61 @@ console.log("\n--- eerste 22 regels ---");
 console.log(out.slice(0, 22).join("\n"));
 console.log("--- laatste 8 regels ---");
 console.log(out.slice(-8).join("\n"));
+
+// ===========================================================================
+// Regressie: M27x3 met een NEGATIEVE backHeight_offset.
+// Hier liep de draad 4.5 mm voorbij de harde stop op Z-46.7709, omdat het
+// eindpunt uit backHeight_value + backHeight_offset werd berekend in plaats
+// van uit de snijbeweging van Fusion zelf.
+// ===========================================================================
+console.log("\nRegressie M27x3 - harde stop op Z-46.7709");
+
+var HARD_STOP = -46.7709;
+params["operation:threadPitch"] = 3;
+params["operation:threadDepth"] = 1.84;
+params["operation:frontHeight_value"] = -7.382;
+params["operation:frontHeight_offset"] = 4.5;
+params["operation:backHeight_value"] = HARD_STOP;
+params["operation:backHeight_offset"] = -4.5;   // negatief: hier ging het mis
+settings._11_oscillatie = "normal";
+settings._12_aantalPassen = 14;
+settings._15_toerentalVariatie = 10;
+g.spindleSpeed = 1100;
+
+out.length = 0;
+g.errors.length = 0;
+g.xOutput.reset(); g.yOutput.reset(); g.zOutput.reset(); g.gMotionModal.reset();
+
+g.variThread.start();
+[[30.764 / 2, 3, false], [30.764 / 2, -7.382, false]].forEach(function (m) {
+    g.variThread.record(m[0], 0, m[1], m[2]);
+});
+for (var k = 0; k < 5; k++) {
+    g.variThread.record(26.5 / 2 - k * 0.2, 0, -7.382, false);
+    g.variThread.record(26.5 / 2 - k * 0.2, 0, HARD_STOP, true);
+    g.variThread.record(30.764 / 2, 0, HARD_STOP, false);
+}
+
+var geo2 = g.variThread.geometry();
+near(geo2.zEnd, HARD_STOP, 1e-9, "Z-eind = de harde stop, niet 4.5 mm erachter");
+near(geo2.zMotionStart, -7.382, 1e-9, "Z-begin uit de positionering van Fusion");
+
+g.variThread.emit();
+ok(g.errors.length === 0, "geen fouten: " + g.errors.join("; "));
+
+var g33b = out.filter(function (l) { return l.indexOf("G33") === 0; });
+var zs = g33b.map(function (l) { return parseFloat(/Z(-?[\d.]+)/.exec(l)[1]); });
+// Tolerantie = de resolutie van zFormat (3 decimalen); -46.7709 schrijft als
+// -46.771, net als in de uitvoer van Fusion zelf.
+var RES = 0.0005;
+var past = zs.filter(function (z) { return z < HARD_STOP - RES; });
+ok(past.length === 0, "geen enkele G33 voorbij Z" + HARD_STOP + ": " + past.slice(0, 3).join(", "));
+near(Math.min.apply(null, zs), HARD_STOP, RES, "diepste Z raakt de harde stop");
+
+var starts = out.filter(function (l) { return /^Z-?[\d.]+$/.test(l); })
+    .map(function (l) { return parseFloat(l.slice(1)); });
+var tooFar = starts.filter(function (z) { return z > -7.382 + RES; });
+ok(tooFar.length === 0, "geen enkele aanloop voorbij het Z-begin van Fusion: " + tooFar.slice(0, 3).join(", "));
 
 console.log("\n" + (fails === 0 ? "OK" : "MISLUKT") + " - " + (checks - fails) + "/" + checks + " controles geslaagd");
 process.exit(fails === 0 ? 0 : 1);

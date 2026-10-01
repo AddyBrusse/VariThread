@@ -187,8 +187,7 @@ Uit `reference/fusion-1001-debug.mpf`:
 |---|---|---|
 | `operation:threadPitch` | 6 | spoed |
 | `operation:threadDepth` | 1 | profieldiepte |
-| `operation:frontHeight_value/_offset` | 5 / 5 | draadbegin = 0 |
-| `operation:backHeight_value/_offset` | −54,5 / 0,5 | draadeinde = −54 |
+| `operation:frontHeight_offset` | 5 | lengte van de aanloop |
 | `operation:numberOfStepdowns` | 5 | aantal snedes als optie 12 = 0 |
 
 **Let op:** `operation:threadInfoMajorDiameter` is **0** zodra
@@ -197,3 +196,33 @@ originele post (rond regel 3994) zou daarop door nul delen. De post leidt de
 diameter daarom af uit de diepste snede die Fusion aanlevert plus de draaddiepte.
 
 De post schrijft het toerental als `S4=` via `getSpindleCode()`, niet als `S`.
+
+## Het Z-venster komt uit de bewegingen, niet uit de parameters
+
+`frontHeight_value` en `backHeight_value` zijn precies waar de G33 van Fusion
+begint en eindigt. De bijbehorende `_offset` zegt hoeveel dat van het
+draadlichaam afligt — maar **het teken van die offset wisselt per operatie**.
+
+Een M27×3 met `backHeight_offset = −4,5` kwam daardoor op Z−51,271 uit terwijl
+de harde stop op Z−46,7709 lag: 4,5 mm te ver. In het eerdere voorbeeld was de
+offset +0,5 en kwam de draad juist 0,5 mm te kort — dezelfde fout, maar
+onschuldig, dus die viel niet op.
+
+De post rekent daarom niet meer met die offsets:
+
+```
+zEnd         = Z van de snijbewegingen van Fusion
+zMotionStart = Z van de laatste positionering voor de eerste snede
+aanloop      = max(|frontHeight_offset|, grootste Zdisp)
+nulpunt      = zMotionStart − aanloop
+lengte       = nulpunt − zEnd
+```
+
+Snede 1 begint daarmee altijd exact waar Fusion begon, elke volgende snede
+schuift naar binnen, en het eindpunt is letterlijk dat van Fusion — inclusief
+uitloop en aanslag, die Fusion al heeft meegenomen. Is de aanloop van Fusion
+korter dan de Z-verschuiving van de diepste snede, dan schuift het nulpunt van
+de oscillatie mee naar binnen in plaats van dat de aanloop naar buiten groeit.
+
+Daarbovenop controleert de emitter elke gegenereerde beweging tegen dat venster
+en breekt af met een foutmelding als er iets buiten valt.

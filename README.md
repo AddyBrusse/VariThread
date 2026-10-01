@@ -65,6 +65,9 @@ Er is geen build-stap en er zijn geen afhankelijkheden: de post is het product.
   deze cyclus niet.
 - **Draai het eerst droog.** Er is nog geen programma van deze post op een
   machine gedraaid.
+- Het Z-bereik wordt overgenomen van Fusion: de draad eindigt exact waar de
+  G33 van Fusion eindigt. De post controleert dat ook en breekt af als er een
+  beweging buiten dat venster zou vallen.
 - De diepteverdeling is opgemeten bij 16 en 18 snedes. Zet je optie 12 op 8 of
   op 25, dan wordt er buiten dat bereik geïnterpoleerd — de einddiepte klopt
   altijd, de verdeling ertussen kan van Sandvik afwijken.

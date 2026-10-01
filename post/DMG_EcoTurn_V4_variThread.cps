@@ -3128,14 +3128,21 @@ var variThread = {
         for (i = 0; i < rapids.length; ++i) { xRetract = Math.max(xRetract, rapids[i].x * 2); }
         if (!isFinite(xDeepest) || !isFinite(xRetract)) { return null; }
 
-        // Het draadlichaam zelf, zonder de aanloop die Fusion ervoor zet.
-        if (!hasParameter("operation:frontHeight_value") || !hasParameter("operation:backHeight_value")) {
-            return null;
+        // Het Z-venster komt uit de bewegingen van Fusion zelf, niet uit
+        // frontHeight_value/backHeight_value plus hun offsets. Het teken van
+        // die offsets wisselt per operatie - een negatieve backHeight_offset
+        // legde het draadeinde 4.5 mm voorbij de harde stop. Fusion heeft het
+        // eindpunt al bepaald, inclusief uitloop en aanslag; dat nemen we over.
+        var zEnd = Infinity;
+        for (i = 0; i < cuts.length; ++i) { zEnd = Math.min(zEnd, cuts[i].z); }
+
+        // Waar de eerste G33 begint: de laatste positionering voor de eerste snede.
+        var zMotionStart = null;
+        for (i = 0; i < this.moves.length; ++i) {
+            if (this.moves[i].cut) { break; }
+            zMotionStart = this.moves[i].z;
         }
-        var zBodyStart = getParameter("operation:frontHeight_value") - getParameter("operation:frontHeight_offset", 0);
-        var zBodyEnd = getParameter("operation:backHeight_value") + getParameter("operation:backHeight_offset", 0);
-        var length = Math.abs(zBodyStart - zBodyEnd);
-        if (length <= 0) { return null; }
+        if (zMotionStart === null || !isFinite(zEnd) || !(zMotionStart > zEnd)) { return null; }
 
         var nominalDiameter = xDeepest + 2 * depth;
 
@@ -3144,8 +3151,11 @@ var variThread = {
             nominalDiameter: nominalDiameter,
             startDiameter: nominalDiameter + VariThread.START_OVERSIZE_DIA,
             totalDepth: depth + VariThread.START_OVERSIZE_DIA / 2,
-            threadLength: length,
-            zThreadStart: zBodyStart,
+            zMotionStart: zMotionStart,
+            zEnd: zEnd,
+            // De aanloop die Fusion voor de draad zet; daarbinnen past de
+            // Z-verschuiving van de diepere snedes.
+            frontOffset: Math.abs(getParameter("operation:frontHeight_offset", 0)),
             retractDiameter: xRetract,
             fusionPasses: cuts.length
         };
@@ -3189,12 +3199,23 @@ var variThread = {
         var variation = parseFloat(getProperty(properties._15_toerentalVariatie));
         if (!(variation > 0)) { variation = 0; }
 
+        // De diepste snede verschuift het verst in Z; die verschuiving moet in
+        // de aanloop passen. Is de aanloop van Fusion korter, dan schuift het
+        // nulpunt van de oscillatie mee naar binnen. Snede 1 begint daardoor
+        // altijd precies waar Fusion begon, en geen enkele snede komt buiten
+        // het venster dat Fusion heeft uitgerekend.
+        var aps = VariThread.passDepths(geo.totalDepth, numPasses, extraStraightPass);
+        var maxZdisp = VariThread.zDisplacement(aps[aps.length - 1], aps[0]);
+        var leadIn = Math.max(geo.frontOffset, maxZdisp);
+        var zThreadStart = geo.zMotionStart - leadIn;
+
         var passes = VariThread.buildPasses({
             startDiameter: geo.startDiameter,
             totalDepth: geo.totalDepth,
             pitch: geo.pitch,
-            threadLength: geo.threadLength,
-            zThreadStart: geo.zThreadStart,
+            threadLength: zThreadStart - geo.zEnd,
+            zThreadStart: zThreadStart,
+            leadIn: leadIn,
             numPasses: numPasses,
             frequency: frequency,
             extraStraightPass: extraStraightPass,
@@ -3202,11 +3223,27 @@ var variThread = {
             rpmVariationPercent: variation
         });
 
+        // Vangnet: geen enkele beweging mag buiten het venster van Fusion vallen.
+        // Een draad die voorbij de harde stop loopt kost een beitel en een werkstuk.
+        for (var c = 0; c < passes.length; ++c) {
+            if (passes[c].zStart > geo.zMotionStart + 1e-6) {
+                error(localize("VariThread: aanloop valt buiten het bereik dat Fusion heeft berekend."));
+                return;
+            }
+            for (var cn = 0; cn < passes[c].nodes.length; ++cn) {
+                if (passes[c].nodes[cn].z < geo.zEnd - 1e-6) {
+                    error(localize("VariThread: draad loopt voorbij het eindpunt dat Fusion heeft berekend."));
+                    return;
+                }
+            }
+        }
+
         writeComment("VARITHREAD");
         writeComment("SPOED: " + spatialFormat.format(geo.pitch));
         writeComment("DIAMETER: " + spatialFormat.format(geo.nominalDiameter));
         writeComment("PROFIELDIEPTE: " + spatialFormat.format(geo.totalDepth - VariThread.START_OVERSIZE_DIA / 2));
-        writeComment("LENGTE: " + spatialFormat.format(geo.threadLength));
+        writeComment("LENGTE: " + spatialFormat.format(zThreadStart - geo.zEnd) +
+            " (Z" + zFormat.format(zThreadStart) + " tot Z" + zFormat.format(geo.zEnd) + ")");
         writeComment("SNEDES: " + integerFormat.format(passes.length) + (extraStraightPass ? " (incl. rechte snede)" : ""));
         writeComment("OSCILLATIE: " + String(frequency).toUpperCase());
         if (variation > 0) {
